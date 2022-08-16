@@ -1,15 +1,16 @@
 package model.calculoIcms;
 
+import model.IcmsEstados;
 import model.Orcamento;
 public class IcmsFactory {
-    public CalculoPorRegiao getIcmsPorEstado(String nomeEstado) {
-        if (nomeEstado.equalsIgnoreCase("ICMS_MG")) {
+    public CalculoPorRegiao getIcmsPorEstado(IcmsEstados icmsEstados) {
+        if (icmsEstados.equals(IcmsEstados.ICMS_MG)) {
             return new IcmsMG();
-        } else if (nomeEstado.equalsIgnoreCase("ICMS_SP")) {
+        } else if (icmsEstados.equals(IcmsEstados.ICMS_SP)) {
             return new IcmsSP();
-        }else if (nomeEstado.equalsIgnoreCase("ICMS_RJ")){
+        }else if ((icmsEstados.equals(IcmsEstados.ICMS_RJ))){
             return new IcmsRJ();
-        }else if(nomeEstado.equalsIgnoreCase("ICMS_ES")){
+        }else if((icmsEstados.equals(IcmsEstados.ICMS_ES))){
             return new IcmsES();
         }else{
             return null;

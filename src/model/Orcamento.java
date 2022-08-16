@@ -4,14 +4,14 @@ import java.math.BigDecimal;
 
 public class Orcamento {
     private BigDecimal valorOrcamento;
-    private String IcmsRegiao;
+    private IcmsEstados icmsEstados;
 
     public Orcamento() {
     }
 
-    public Orcamento(BigDecimal valorOrcamento, String icmsRegiao) {
+    public Orcamento(BigDecimal valorOrcamento, IcmsEstados icmsEstados) {
         this.valorOrcamento = valorOrcamento;
-        IcmsRegiao = icmsRegiao;
+        this.icmsEstados = icmsEstados;
     }
 
     public BigDecimal getValorOrcamento() {
@@ -22,11 +22,11 @@ public class Orcamento {
         this.valorOrcamento = valorOrcamento;
     }
 
-    public String getIcmsRegiao() {
-        return IcmsRegiao;
+    public IcmsEstados getIcmsEstados() {
+        return icmsEstados;
     }
 
-    public void setIcmsRegiao(String icmsRegiao) {
-        IcmsRegiao = icmsRegiao;
+    public void setIcmsEstados(IcmsEstados icmsEstados) {
+        this.icmsEstados = icmsEstados;
     }
 }
